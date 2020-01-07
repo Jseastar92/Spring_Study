@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 /.idea/
 /lib/
-=======
 # Compiled class file
 *.class
 
@@ -25,4 +23,3 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
->>>>>>> a95724bbd30bd7a187264441a643617588210bf2
