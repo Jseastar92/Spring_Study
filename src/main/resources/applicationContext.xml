@@ -8,11 +8,13 @@
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-
-<!--	<context:component-scan base-package="polymorphism"/>-->
-	<bean id="tv" class="polymorphism.SamsungTV">
-<!--		<constructor-arg ref="sony"/>-->
+	<bean id="tv" class="polymorphism.SamsungTV" >
+		<constructor-arg ref="sony"/>
 	</bean>
+
+	<bean id="sony" class="polymorphism.SonySpeaker"/>
+<!--	<context:component-scan base-package="polymorphism"/>-->
+<!--		<constructor-arg ref="sony"/>-->
 
 <!--	<bean id="sony" class="polymorphism.SonySpeaker"/>-->
 </beans>
