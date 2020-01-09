@@ -10,14 +10,13 @@ public class SamsungTV implements TV   {
         System.out.println("===> samsung TV Object(1) Created");
     }
 
-    public SamsungTV(Speaker speaker) {
-        System.out.println("----> SamsungTv Obj(2) Created");
+    public void setSpeaker(Speaker speaker) {
+        System.out.println("===> setSpeaker() call");
         this.speaker = speaker;
     }
 
-    public SamsungTV(Speaker speaker, int price) {
-        System.out.println("=======>> Samsung TV (3) obj created");
-        this.speaker = speaker;
+    public void setPrice(int price) {
+        System.out.println("---> setPrice() call");
         this.price = price;
     }
 
