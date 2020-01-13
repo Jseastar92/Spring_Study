@@ -17,6 +17,35 @@ http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 	<bean id="sony" class="polymorphism.SonySpeaker"/>
 	<bean id="apple" class="polymorphism.AppleSpeaker"/>
+
+	<bean id="collectionBean"
+		  class="com.springbook.ioc.injection.CollectionBean">
+			<property name="addressList">
+
+				<props>
+					<prop key="고길동">서울시 강동구 고덕동</prop>
+					<prop key="마이콜">서울시 성동구 성수동</prop>
+				</props>
+
+				<!--<map>
+					<entry>
+						<key><value>고길동</value></key>
+						<value>서울시 강동구 고덕동</value>
+					</entry>
+					<entry>
+						<key><value>마이콜</value></key>
+						<value>서울시 성동구 성수동</value>
+					</entry>
+				</map>-->
+
+				<!--<set value-type="java.lang.String">
+					<value>서울시 강동구 고덕동</value>
+					<value>서울시 성동구 성수동</value>
+					<value>서울시 성동구 성수동</value>
+				</set>-->
+			</property>
+	</bean>
+
 <!--	<context:component-scan base-package="polymorphism"/>-->
 <!--		<constructor-arg ref="sony"/>-->
 
