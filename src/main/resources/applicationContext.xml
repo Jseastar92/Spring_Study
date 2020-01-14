@@ -5,49 +5,55 @@
 	   xmlns:p="http://www.springframework.org/schema/p"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-http://www.springframework.org/schema/context
-http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="270000" >
-<!--		<constructor-arg ref="apple"/>-->
-<!--		<constructor-arg value="270000"/>-->
-<!--		<property name="speaker" ref="apple"/>-->
-<!--		<property name="price" value="270000"/>-->
-	</bean>
+	<context:component-scan base-package="polymorphism"/>
+	<bean class="polymorphism.AppleSpeaker"/>
+	<bean id="tv" class="polymorphism.LgTV"/>
 
-	<bean id="sony" class="polymorphism.SonySpeaker"/>
-	<bean id="apple" class="polymorphism.AppleSpeaker"/>
 
-	<bean id="collectionBean"
-		  class="com.springbook.ioc.injection.CollectionBean">
-			<property name="addressList">
-
-				<props>
-					<prop key="고길동">서울시 강동구 고덕동</prop>
-					<prop key="마이콜">서울시 성동구 성수동</prop>
-				</props>
-
-				<!--<map>
-					<entry>
-						<key><value>고길동</value></key>
-						<value>서울시 강동구 고덕동</value>
-					</entry>
-					<entry>
-						<key><value>마이콜</value></key>
-						<value>서울시 성동구 성수동</value>
-					</entry>
-				</map>-->
-
-				<!--<set value-type="java.lang.String">
-					<value>서울시 강동구 고덕동</value>
-					<value>서울시 성동구 성수동</value>
-					<value>서울시 성동구 성수동</value>
-				</set>-->
-			</property>
-	</bean>
-
-<!--	<context:component-scan base-package="polymorphism"/>-->
-<!--		<constructor-arg ref="sony"/>-->
+</beans>
+<!--	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="270000" >-->
+<!--&lt;!&ndash;		<constructor-arg ref="apple"/>&ndash;&gt;-->
+<!--&lt;!&ndash;		<constructor-arg value="270000"/>&ndash;&gt;-->
+<!--&lt;!&ndash;		<property name="speaker" ref="apple"/>&ndash;&gt;-->
+<!--&lt;!&ndash;		<property name="price" value="270000"/>&ndash;&gt;-->
+<!--	</bean>-->
 
 <!--	<bean id="sony" class="polymorphism.SonySpeaker"/>-->
-</beans>
+<!--	<bean id="apple" class="polymorphism.AppleSpeaker"/>-->
+
+<!--	<bean id="collectionBean"-->
+<!--		  class="com.springbook.ioc.injection.CollectionBean">-->
+<!--			<property name="addressList">-->
+
+<!--				<props>-->
+<!--					<prop key="고길동">서울시 강동구 고덕동</prop>-->
+<!--					<prop key="마이콜">서울시 성동구 성수동</prop>-->
+<!--				</props>-->
+
+<!--				&lt;!&ndash;<map>-->
+<!--					<entry>-->
+<!--						<key><value>고길동</value></key>-->
+<!--						<value>서울시 강동구 고덕동</value>-->
+<!--					</entry>-->
+<!--					<entry>-->
+<!--						<key><value>마이콜</value></key>-->
+<!--						<value>서울시 성동구 성수동</value>-->
+<!--					</entry>-->
+<!--				</map>&ndash;&gt;-->
+
+<!--				&lt;!&ndash;<set value-type="java.lang.String">-->
+<!--					<value>서울시 강동구 고덕동</value>-->
+<!--					<value>서울시 성동구 성수동</value>-->
+<!--					<value>서울시 성동구 성수동</value>-->
+<!--				</set>&ndash;&gt;-->
+<!--			</property>-->
+<!--	</bean>-->
+
+<!--&lt;!&ndash;	<context:component-scan base-package="polymorphism"/>&ndash;&gt;-->
+<!--&lt;!&ndash;		<constructor-arg ref="sony"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;	<bean id="sony" class="polymorphism.SonySpeaker"/>&ndash;&gt;-->
+<!--</beans>-->
