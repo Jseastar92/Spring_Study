@@ -18,6 +18,7 @@ public class TVUser {
         tv.powerOff();
         tv.volumeUp();
         tv.volumeDown();
+        tv.volumeDown();
 //
 //        // 3. Sprng 컨테이너 종료
         factory.close();
